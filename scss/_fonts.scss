@@ -1,0 +1,77 @@
+/*
+GRIFTER  Bold   700
+Hanson 	    700
+Lexend	 Bold   700
+Inter	      700
+Inter       400
+Gotham	    350
+*/
+  @font-face {
+    font-family: 'GrifterBold';
+    src: url('../fonts/GRIFTER-Bold.woff2') format('woff2'), url('../fonts/GRIFTER-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-stretch:normal;
+  }
+  @font-face {
+    font-family: 'LexendBold';
+    src: url('../fonts/Lexend-Bold.woff2') format('woff2'), url('../fonts/Lexend-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-stretch:normal;
+  }
+  @font-face {
+    font-family: 'HansonBold';
+    src: url('../fonts/Hanson-Bold.woff2') format('woff2'), url('../fonts/Hanson-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-stretch:normal;
+  }
+  @font-face {
+    font-family: 'InterBold';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2'), url('../fonts/Inter-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-stretch:normal;
+  }
+   
+  @font-face {
+    font-family: 'InterRegular';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'), url('../fonts/Inter-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-stretch:normal;
+  }
+  @font-face {
+    font-family: 'GothamBook';
+    src: url('../fonts/Gotham-Book.woff2') format('woff2'), url('../fonts/Gotham-Book.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-stretch:normal;
+  }
+  
+  @mixin grifter700 {
+    font-family:'GrifterBold', Arial, sans-serif;
+    font-weight: 700;
+  }
+  @mixin lexend700 {
+    font-family:'LexendBold', Arial, sans-serif;
+    font-weight: 700;
+  }
+  @mixin hanson700 {
+    font-family:'HansonBold', Arial, sans-serif;
+    font-weight: 700;
+  }
+  @mixin inter700 {
+    font-family:'InterBold', Arial, sans-serif;
+    font-weight: 700;
+  }
+  @mixin inter400 {
+    font-family:'InterRegular', Arial, sans-serif;
+    font-weight: 400;
+  }
+  @mixin gotham400 {
+    font-family:'GothamBook', Arial, sans-serif;
+    font-weight: 400;
+  }
+  

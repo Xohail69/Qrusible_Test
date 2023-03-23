@@ -1,0 +1,76 @@
+.footer { 
+     background-color: $black; width: 100%; float: left; padding:10rem 0 4rem 0;    
+    .footerinsider { 
+        @include fCC(); width: 95%; max-width: 1340px; margin: 0 auto; float:none;
+        p { 
+             float: left; padding:0.5rem 1.4rem; margin-right:0.7rem; border-right: solid 1px $white;
+             a { 
+                text-decoration: none; cursor: pointer; @include grifter700(); font-size: 16px; color: $gray; @include outT();
+                &:hover {  color: $green; @include inT(); }
+             }
+        }
+        ul {
+            width: auto; float: left; @include fSC();
+            li { 
+                 list-style: none; margin: 0 0.7rem; 
+                 a { 
+                    text-decoration: none;
+                    img { width: auto; border: 0; max-width: 100%; }
+                 }
+            }
+        }
+    }
+}
+ 
+ 
+ 
+@media only screen and (max-width:1255px) 
+{
+    .footer { padding:7rem 0 3rem 0;    }
+
+}
+
+@media only screen and (max-width:1023px) 
+{
+    .footer { 
+        padding:5rem 0 2rem 0;    
+       .footerinsider { 
+           p { 
+                a { font-size: 14px;   }
+           }
+           ul {
+               li { 
+                    a { 
+                       img {  max-width: 80%; }
+                    }
+               }
+           }
+       }
+   }
+
+}
+
+
+
+@media only screen and (max-width:599px) 
+{
+    .footer { 
+        padding:5rem 0 1rem 0; 
+       .footerinsider { 
+           p { 
+                
+                padding:0.4rem 1rem; margin-right:0.5rem; ;
+                a { font-size: 12px;   }
+           }
+           ul {
+               li { 
+                margin: 0 0.5rem; 
+                    a { 
+                       img {  max-width: 70%; }
+                    }
+               }
+           }
+       }
+   }
+
+}

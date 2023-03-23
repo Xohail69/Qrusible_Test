@@ -1,0 +1,66 @@
+.videowrap { 
+     width: 100%; float: left; padding:10rem 0 0 0;    
+   .videoinsider { 
+       @include fBC(); width: 95%; max-width: 1240px; margin: 0 auto; float:none;
+       .videoinfo { 
+            float: left; width: 50%;
+            h2 { 
+                width: 100%; float: left; text-align: left; @include hanson700(); font-size: 50px; line-height: 1; color: $white; 
+                span { display: inline-block; color: $green3; }
+            }
+       }
+       .videoframe {
+            float: right; width: 40%; overflow: hidden; border-radius: 20px; background:transparent; border: solid 2px $green;
+            video { display: block; width: 100%; height: 100%; float: left; border: 0; margin: 0; padding: 0; border-radius: 20px; }
+       }
+   }
+}
+
+
+
+ 
+@media only screen and (max-width:1255px) 
+{
+     .videowrap { 
+         padding:5rem 0 0 0;    
+        .videoinsider { 
+            .videoinfo { 
+               width: 50%;
+                 h2 { font-size:40px;  }
+            }
+            .videoframe {width: 45%; }
+        }
+     }
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+     .videowrap { 
+          padding:4rem 0 0 0;    
+        .videoinsider { 
+             max-width: 90%;  
+            .videoinfo { 
+                 h2 { font-size:30px;  }
+            }
+        }
+     }
+}
+
+@media only screen and (max-width:599px) 
+{
+     .videowrap {   
+          padding:2rem 0 0 0;      
+        .videoinsider { 
+          flex-wrap: wrap;
+            .videoinfo { 
+               width: 100%;
+                 h2 { font-size:24px;  }
+            }
+            .videoframe { 
+               margin-top: 2rem; width: 100%;  border-width:1px; border-radius: 15px; 
+               video { border-radius: 15px; }
+          }
+        }
+     }
+}

@@ -1,0 +1,131 @@
+.profileheading { 
+    width: 100%; float: left; margin:5rem 0 3rem 0; text-align: center; @include hanson700(); font-size: 50px; line-height: 1; color: $white; 
+    span { display: inline-block; color: $green3; }
+}
+.profileunlocks { 
+    width: 100%; float: left; padding:0 0 8rem 0; 
+    .profileunlockinner { 
+        @include fBC(); align-items: stretch; width: 95%; max-width: 1240px; margin: 0 auto; float:none;
+        .profileunlockleft { 
+            width: 40%; float: left;
+           .profileframe {  width: 310px; height: auto; float: right; border: 0; }
+        }
+        .profileunlockright { 
+            width: 55%; float:right;
+            ul {
+                width: 100%; float: left; display: flex; height: 100%;flex-wrap: wrap;
+                li {
+                    list-style: none; width: 100%; float: left; @include fCS();  flex-direction: column; 
+                    &:nth-of-type(2) { margin:1rem 0; }
+                    h3 {  width: 100%; float: left; text-align: left;  @include hanson700(); font-size: 50px; line-height:1; color: $gray4; text-transform: uppercase;}
+                    p { margin-top: 0.5rem;  width: 100%; float: left; text-align: left;  @include grifter700(); font-size: 25px; line-height:1; color: $gray2;  }
+                    &:nth-of-type(1) {
+                        h3 { color: $white; }
+                    }
+                    &:nth-of-type(2) {
+                        h3 { color: $gray4; }
+                    }
+                    &:nth-of-type(3) {
+                        h3 { color: $gray5; }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:1255px) 
+{
+    .profileheading { margin:5rem 0 2rem 0; font-size: 40px; }
+
+    .profileunlocks { 
+         padding:0 0 5rem 0; 
+        .profileunlockinner { 
+            .profileunlockleft { width: 35%; }
+            .profileunlockright { 
+                width: 60%; 
+                ul {
+                    li {
+                        h3 {  font-size: 40px;  }
+                        p {  font-size: 22px;   }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width:1023px) 
+{
+    .profileheading { margin:4rem 0 2rem 0; font-size: 30px; }
+
+    .profileunlocks { 
+         padding:0 0 4rem 0; 
+        .profileunlockinner { 
+            .profileunlockleft { 
+                width: 45%; 
+                .profileframe {  width: 250px;  }
+            }
+            .profileunlockright { 
+                width: 50%; 
+                ul {
+                    li {
+                        h3 {  font-size: 24px;  }
+                        p {  font-size: 18px;   }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width:599px) 
+{
+    .profileheading { margin:3rem 0 1rem 0; font-size: 20px; }
+    .profileunlocks { 
+        padding:0 0 3rem 0; 
+       .profileunlockinner { 
+           .profileunlockleft { 
+                width: 48%; 
+                .profileframe {  width: 180px;  }
+            }
+           .profileunlockright { 
+               width: 50%; 
+               ul {
+                   li {
+                       h3 {  font-size: 18px;  }
+                       p {  font-size: 12px;   }
+                   }
+               }
+           }
+       }
+   }
+
+}
+
+@media only screen and (max-width:367px) 
+{
+    .profileunlocks { 
+       .profileunlockinner { 
+           .profileunlockleft { 
+                width: 50%; 
+                .profileframe {  width: 160px;  }
+            }
+           .profileunlockright { 
+               width: 45%; 
+               ul {
+                   li {
+                       h3 {  font-size: 14px;  }
+                       p {  font-size: 10px;   }
+                   }
+               }
+           }
+       }
+   }
+
+}

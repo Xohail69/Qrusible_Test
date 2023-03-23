@@ -1,0 +1,40 @@
+.mainwrap { 
+   position: relative;  background-color: $black; width: 100%; float: left; overflow: hidden;
+   .bg_left_top {  z-index: 1; position: absolute; width: 2684px;height:750px;left: -2400px;top:150px;background: linear-gradient(226.61deg, #4F3570 48.15%, #463DAB 82.13%);filter: blur(199px);}
+   .bg_right_top { z-index: 1; position: absolute; width: 347px;height: 900px;right: -250px;top: 600px; background: linear-gradient(42.83deg, #00FF66 34.07%, #000000 92.8%); filter: blur(199px); }
+   .bg_right_bott { z-index: 1; position: absolute; width: 360px;height: 1200px;right: -500px;bottom: 200px; background: linear-gradient(180deg, #0FF1C8 80.27%, #5F0245 113.62%);filter: blur(199px);transform: rotate(62.54deg); }
+   
+   .maincontainer  { z-index: 2; position: relative; width: 100%;  float:left;  }
+}
+
+@media only screen and (max-width:1255px) 
+{
+   .mainwrap { 
+      .bg_left_top {  top:150px; }
+      .bg_right_top {  top:300px;  }
+      .bg_right_bott { bottom: 100px;  }
+   }
+   
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+   .mainwrap { 
+      .bg_left_top { left: -2545px; top:100px; }
+      .bg_right_top { right: -350px; top:250px;  }
+      .bg_right_bott { right: -640px; bottom: 100px;  }
+   }
+   
+}
+
+
+@media only screen and (max-width:599px) 
+{
+   .mainwrap { 
+      .bg_left_top { left: -2600px; top:50px; }
+      .bg_right_top { right: -420px; top:200px;  }
+      .bg_right_bott { right: -640px; bottom: 100px;  }
+   }
+   
+}

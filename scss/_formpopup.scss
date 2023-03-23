@@ -1,0 +1,162 @@
+.earlyAccessPopup { 
+    display:none; z-index:9; position: fixed; left: 0; top: 0; height: 100%; width: 100%; background-color: $black; background:rgba(1,254,155,0.7); 
+    
+    section { 
+        @include fBS(); flex-wrap: wrap; z-index:2;  position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); width: 98%; max-width:1000px; height: auto; max-height: 98%; background:$black; border-radius:25px; margin:0 auto; padding:3rem;  
+        aside { 
+            display: block; z-index: 3; position: absolute; right:1rem; top:1rem; font-size:30px; @include grifter700(); color: $white; cursor: pointer; text-decoration: none; @include outT();
+            &:hover { color:$green; @include inT(); }
+        }
+        h2, h3 { 
+            width: 100%; float: left;  margin:0 0 2rem 0; text-align: center; @include grifter700(); font-size:36px; line-height: 1.3; color: $white; 
+            span { display: inline-block; color: $green; }
+        }
+        h3{ margin-top:2rem; color: $gray6; }
+        .earlyaccessThanks { 
+            width: 100%; float: left;  margin:5rem 0; text-align: center; 
+            h6 { 
+                width: 100%; float: left; text-align: center; 
+                img { display: inline-block; width: 70px; margin: 0 auto; }
+            }
+            p { 
+                margin-top: 1.5rem; width: 100%; float: left; text-align: center;  font-size:36px; line-height: 1.3; color: $white; @include grifter700(); 
+                span { display: inline-block; color: $green; }
+            }
+        }
+        
+        .formfield { 
+           width: 45%;  float: left; margin:0.7rem 0;
+            .formfieldLablehead {width: 100%;  float: left; margin:0 0 0.6rem 0; text-align: left; color: $gray6; font-size: 24px; @include grifter700(); }
+            .formfieldInput, .formfieldInput:focus { width: 100%; float: left; padding:0.8rem; margin:0; border: 0; outline: 0; text-align: left;  @include grifter700(); color: $green; font-size: 24px; background: linear-gradient(94.44deg, #1C1C1C 5.23%, rgba(14, 14, 14, 0) 136.35%); border: 2px solid #2d2d2d; border-radius: 10px; }
+            .formfieldError {display: none; width: 100%;  float: left; margin: 0.6rem 0 0 0; text-align: left;  @include inter400(); color: $red; font-size: 16px;  }
+            
+        }
+        .formbox { 
+            width: 45%;  float: left; margin:0.7rem 0; padding-left: 7%;
+            input[type='checkbox'] { display: none; }
+            .formLabel { position: relative; width: auto; float: left; padding:0 0 0 30px; margin:0; cursor: pointer; text-align: left; @include grifter700(); color: $gray7; font-size:24px; line-height: 1; }
+            .formLabel:before, input[type="checkbox"]:checked + .formLabel:before{ content: ''; z-index:1; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius:5px; border:1px solid #2d2d2d; background: linear-gradient(94.44deg, #1C1C1C 5.23%, rgba(14, 14, 14, 0) 136.35%); }
+            .formLabel:after{ content: ''; position: absolute; left: 5px; top: 5px; z-index: 2; opacity: 0;  border-radius:3px; outline: none; float: left; width:12px; height:12px; border: none; background: linear-gradient(143.79deg, #01FE9B 10.41%, rgba(1, 254, 155, 0.76) 122.4%); }
+            input[type="checkbox"]:checked + .formLabel:after{ opacity:1; }
+        }
+        .formboxerror { display: none; width: 100%;  float: left; margin: 0.6rem 0 0 0; text-align: center;  @include inter400(); color: $red; font-size: 14px;  } 
+        .formbottom { 
+            width: 100%;  float: left; margin-top: 2rem; text-align: center;  
+            .formButton { 
+                position: relative; display: inline-block; padding: 1rem 2rem;  text-decoration: none; border-radius: 100px; @include outT(); line-height: 1; overflow: hidden; @include grifter700(); color:$white; font-size: 25px; line-height:1; cursor: pointer; border: solid 3px $green; background-color: $black;
+                &:hover {
+                   color: $black; background:$green; @include inT(); 
+                }
+            }
+        }           
+    }
+}
+
+@media only screen and (max-width:1565px) 
+{
+    .earlyAccessPopup {  
+        section { 
+            border-radius:15px; padding:2rem 2rem; 
+            h2, h3 { margin:0 0 1rem 0; font-size:28px; }
+            h3{ margin-top:1rem;  }
+            .earlyaccessThanks { margin:3rem 0; }
+            .formfield { 
+               width: 47%; 
+                .formfieldLablehead { font-size: 18px;  }
+                .formfieldInput { padding:0.7rem; font-size: 18px; }
+                .formfieldError { margin: 0.5rem 0 0 0;  font-size: 16px;  }
+                
+            }
+            .formbox { 
+                width: 47%; padding-left:5%;
+                .formLabel { font-size:18px; }
+            }
+            .formboxerror { margin: 0.5rem 0 0 0;  font-size: 16px;  }  
+            .formbottom {   margin-top: 1rem;   }         
+        }
+    }
+}
+
+@media only screen and (max-width:1023px) 
+{
+    .earlyAccessPopup {  
+        section { 
+            border-radius:10px; padding:2rem; 
+            aside { right:0.5rem; top:0.5rem; font-size:24px; }
+            h2, h3 { font-size: 20px; }
+            .earlyaccessThanks {  
+                margin:2rem 0;   
+                h6 { 
+                    img { width: 55px; }
+                }
+                p { margin-top: 1rem; font-size:24px;  }
+            }
+            .formfield { 
+               width: 47%; 
+                .formfieldLablehead { font-size: 14px;  }
+                .formfieldInput { padding:0.7rem; font-size: 16px; }
+                .formfieldError { margin: 0.5rem 0 0 0;  font-size: 12px;  }
+                
+            }
+            .formbox { 
+                width: 47%; padding-left:0%;
+                .formLabel { font-size:16px; }
+            }
+            .formboxerror { margin: 0.5rem 0 0 0;  font-size: 14px;  } 
+            .formbottom { 
+               margin-top: 1rem; 
+                .formButton { 
+                     padding: 1rem 1.5rem;   border-width: 2px;font-size: 20px; 
+                }
+            }           
+        }
+    }
+}
+
+@media only screen and (max-width:479px) 
+{
+    .earlyAccessPopup {
+       
+        section { 
+            border-radius:10px; padding:2rem 1rem 1rem 1rem;  
+            h2, h3 { font-size: 14px; margin: 0 0 0.5rem 0; }
+            h3 { font-size: 16px; margin-top:1rem; }
+            .earlyaccessThanks { 
+                 margin:1rem 0;  
+                 h6 { 
+                    img { width: 45px; }
+                }
+                p { margin-top: 1rem; font-size:20px;  }
+            }
+            .formfield { 
+               width: 48%; 
+                .formfieldLablehead { font-size: 14px;  }
+                .formfieldInput { padding:0.5rem; font-size: 14px; }
+                .formfieldError { margin: 0.5rem 0 0 0;  font-size: 12px;  }
+            }
+            .formbox { 
+                width: 48%; padding-left:0%;
+                .formLabel { padding-top: 5px; font-size:13px; }
+
+            }
+            .formboxerror { margin: 0.5rem 0 0 0; font-size: 14px;  } 
+            .formbottom { 
+               margin-top: 1rem; 
+                .formButton { 
+                     padding: 0.6rem 1.5rem; border-width: 1px;    font-size: 12px; border-radius: 25px; 
+                }
+            }           
+        }
+    }
+}
+
+
+
+@media screen and (min-device-width: 500px) and (max-device-width: 999px) and (orientation : landscape)
+{
+    .earlyAccessPopup { 
+        section {  height: 90%; overflow: hidden; overflow-y: scroll; }
+    }
+    
+    
+}
